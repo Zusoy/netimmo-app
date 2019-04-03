@@ -4,10 +4,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { OwnerListComponent } from './owner-list/owner-list.component';
+import { OwnerFormComponent } from './owner-form/owner-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OwnerListComponent,
+    OwnerFormComponent
   ],
   imports: [
     BrowserModule,

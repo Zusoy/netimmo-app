@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem; margin-top: 2em; margin-left: 3em; display: inline-block; margin-right: 3em;" *ngFor="let owner of owners">
+    <div class="card-body">
+        <h5 class="card-title">{{ owner.firstName }} {{ owner.lastName }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Born the {{ owner.getBirthDate() }}</h6>
+        <p class="card-text"><br>
+            {{ owner.city }},<br>
+            {{ owner.address }},<br>
+            {{ owner.postalCode }}
+        </p>
+    </div>
+</div>

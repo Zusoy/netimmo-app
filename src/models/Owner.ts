@@ -33,12 +33,25 @@ export class Owner extends Model
     /**
      * Owner Postal Code
      */
-    public postalCode: number;
+    public postalCode: string;
 
     /**
      * Owner City
      */
     public city: string;
+
+
+    constructor(firstName: string, lastName: string, birthDate: Date, address: string, postalCode: string, city: string)
+    {
+        super();
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.city = city;
+    }
 
 
     /**
@@ -47,5 +60,11 @@ export class Owner extends Model
     public getId(): number
     {
         return this.id;
+    }
+
+
+    public getBirthDate()
+    {
+        return this.birthDate.toString();
     }
 }
