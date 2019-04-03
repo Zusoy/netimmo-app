@@ -1,0 +1,70 @@
+<div class="container mt-5">
+    <form [formGroup]="estateForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.title.valid ? 'is-valid' : 'is-invalid')" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.description.valid ? 'is-valid' : 'is-invalid')" formControlName="description">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control" [ngClass]="(estateForm.controls.price.valid ? 'is-valid' : 'is-invalid')" formControlName="price">
+        </div>
+        <div class="form-group">
+            <label>Select Owner</label>
+            <select class="form-control" [ngClass]="(estateForm.controls.owner.valid ? 'is-valid' : 'is-invalid')" formControlName="owner">
+                <option *ngFor="let owner of owners" value="{{ owner.id }}">
+                    {{ owner.firstName}} {{ owner.lastName }}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Area</label>
+            <input type="number" class="form-control"[ngClass]="(estateForm.controls.area.valid ? 'is-valid' : 'is-invalid')" formControlName="area">
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.address.valid ? 'is-valid' : 'is-invalid')" formControlName="address">
+        </div>
+        <div class="form-group">
+            <label>Address Complementary</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.addressComplementary.valid ? 'is-valid' : 'is-invalid')" formControlName="addressComplementary">
+        </div>
+        <div class="form-group">
+            <label>Postal Code</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.postalCode.valid ? 'is-valid' : 'is-invalid')" formControlName="postalCode">
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.city.valid ? 'is-valid' : 'is-invalid')" formControlName="city">
+        </div>
+        <div class="form-group">
+            <label>Reference</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.reference.valid ? 'is-valid' : 'is-invalid')" formControlName="reference">
+        </div>
+        <div class="form-group">
+            <label>Sector</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.sector.valid ? 'is-valid' : 'is-invalid')" formControlName="sector">
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.country.valid ? 'is-valid' : 'is-invalid')" formControlName="country">
+        </div>
+        <div class="form-group">
+            <label>Longitude</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.longitude.valid ? 'is-valid' : 'is-invalid')" formControlName="longitude">
+        </div>
+        <div class="form-group">
+            <label>Latitude</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.latitude.valid ? 'is-valid' : 'is-invalid')" formControlName="latitude">
+        </div>
+        <div class="form-group">
+            <label>Picture (url)</label>
+            <input type="text" class="form-control"[ngClass]="(estateForm.controls.picture.valid ? 'is-valid' : 'is-invalid')" formControlName="picture">
+        </div>
+
+        <button type="submit" class="btn btn-success">Create Estate</button>
+    </form>
+</div>

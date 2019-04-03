@@ -8,15 +8,6 @@ import { Owner } from 'src/models/Owner';
 export class OwnerFixture extends AbstractFixture
 {
     /**
-     * Get Fixture Key
-     */
-    public getFixtureKey(): string
-    {
-        return "owners";
-    }
-
-
-    /**
      * Get Fixture Owners Models
      */
     public loadModels(): Owner[]

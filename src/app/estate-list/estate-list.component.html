@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem; margin-top: 2em; margin-left: 3em; display: inline-block; margin-right: 3em;" *ngFor="let estate of estates">
+    <img class="card-img-top" src="{{ estate.picture }}" alt="Card image cap" *ngIf="estate.picture.length">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ estate.reference }} - {{ estate.title }}, {{ estate.area }}m² {{ estate.price }} €</h6>
+        <p class="card-text">
+            {{ estate.description }}
+        </p>
+        <button class="btn btn-danger btn-sm" (click)="deleteEstate(estate)">Delete</button>
+    </div>
+</div>

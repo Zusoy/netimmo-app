@@ -27,9 +27,9 @@ export class Estate extends Model
     public area: number;
 
     /**
-     * List of Owners
+     * Owner ID
      */
-    public owners: Owner[];
+    public owner: number;
 
     /**
      * Estate Reference
@@ -49,7 +49,7 @@ export class Estate extends Model
     /**
      * Estate Postal Code
      */
-    public postalCode: number;
+    public postalCode: string;
 
     /**
      * Estate City
@@ -87,15 +87,34 @@ export class Estate extends Model
     public picture: string;
 
 
-    /**
-     * Add Estate Owner
-     * 
-     * @param owner Owner to Add
-     */
-    public addOwner(owner: Owner): Estate
-    {
-        this.owners.push(owner);
+    
+    constructor(
+        title: string, 
+        description: string, 
+        price: number,
+        area: number,
+        reference: string,
+        address: string,
+        postalCode: string,
+        city: string,
+        sector: string,
+        country: string,
+        picture: string,
+        owner: number
+    ) {
+        super();
 
-        return this;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.area = area;
+        this.reference = reference;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.sector = sector;
+        this.country = country;
+        this.picture = picture;
+        this.owner = owner;
     }
 }

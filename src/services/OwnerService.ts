@@ -3,6 +3,7 @@ import { Owner } from 'src/models/Owner';
 import { ItemService } from './definition/ItemService';
 import { Injectable } from '@angular/core';
 import { OwnerFixture } from './fixtures/OwnerFixture';
+import {AppConfig} from '../app/app.config';
 
 /**
  * Owner Service
@@ -33,10 +34,12 @@ export class OwnerService implements LocalStorageService, ItemService
                 );
             });
         } else {
-            console.log("load owners form fixtures....");
-            //use fixture
-            var fixture = new OwnerFixture();
-            this.models = fixture.loadModels();
+            if (AppConfig.USE_FIXTURES) {
+                //use fixture
+                var fixture = new OwnerFixture();
+                this.models = fixture.loadModels();
+                this.persist();
+            }
         }
     }
 
@@ -59,6 +62,7 @@ export class OwnerService implements LocalStorageService, ItemService
      */
     public add(owner): void
     {
+        var id = this.nextId();
         var ownerModel = new Owner(
             owner.firstName,
             owner.lastName,
@@ -67,6 +71,7 @@ export class OwnerService implements LocalStorageService, ItemService
             owner.postalCode,
             owner.city
         );
+        ownerModel.id = id;
 
         this.models.push(ownerModel);
         this.persist();
@@ -95,7 +100,9 @@ export class OwnerService implements LocalStorageService, ItemService
      */
     public nextId(): number
     {
-        return (this.models[this.models.length -1].getId() + 1);
+        return (this.models.length > 0)
+            ? this.models[this.models.length -1].getId() + 1
+            : 1;
     }
 
 

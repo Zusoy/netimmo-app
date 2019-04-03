@@ -61,6 +61,7 @@ export class OwnerFormComponent implements OnInit {
       }
 
       this.ownerService.add(this.ownerForm.value);
+      this.ownerForm.reset();
   }
 
 }

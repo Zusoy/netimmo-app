@@ -7,7 +7,7 @@ export class Model
     /**
      * Model ID
      */
-    protected id: number;
+    public id: number;
 
 
     /**

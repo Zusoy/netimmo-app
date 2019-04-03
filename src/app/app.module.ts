@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { OwnerListComponent } from './owner-list/owner-list.component';
 import { OwnerFormComponent } from './owner-form/owner-form.component';
+import { EstateFormComponent } from './estate-form/estate-form.component';
+import { EstateListComponent } from './estate-list/estate-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OwnerListComponent,
-    OwnerFormComponent
+    OwnerFormComponent,
+    EstateFormComponent,
+    EstateListComponent
   ],
   imports: [
     BrowserModule,
