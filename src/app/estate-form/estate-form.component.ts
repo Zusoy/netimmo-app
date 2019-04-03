@@ -76,7 +76,6 @@ export class EstateFormComponent implements OnInit
       }
 
       this.estateForm.value.owner = Number.parseInt(this.estateForm.value.owner);
-      console.log(this.estateForm.value);
       this.estateService.add(this.estateForm.value);
       this.estateForm.reset();
   }

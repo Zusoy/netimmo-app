@@ -56,7 +56,7 @@ export class OwnerFormComponent implements OnInit {
   onSubmit()
   {
       if (!this.ownerForm.valid) {
-          console.log("not valid");
+          console.error("Form not Valid");
           return;
       }
 
