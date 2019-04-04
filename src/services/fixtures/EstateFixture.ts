@@ -1,5 +1,6 @@
 import { AbstractFixture } from '../common/AbstractFixture';
 import { Estate } from 'src/models/Estate';
+import { Owner } from 'src/models/Owner';
 
 /**
  * Estate Fixture
@@ -23,8 +24,7 @@ export class EstateFixture extends AbstractFixture
                 "Angers",
                 "Habitation",
                 "France",
-                "",
-                0
+                ""
             ),
             new Estate(
                 "Appartement T2",
@@ -37,8 +37,7 @@ export class EstateFixture extends AbstractFixture
                 "Angers",
                 "Habitation",
                 "France",
-                "",
-                0
+                ""
             ),
             new Estate(
                 "Appartement T2",
@@ -51,8 +50,7 @@ export class EstateFixture extends AbstractFixture
                 "Angers",
                 "Habitation",
                 "France",
-                "",
-                0
+                ""
             ),
         ];
     }

@@ -29,7 +29,7 @@ export class Estate extends Model
     /**
      * Owner ID
      */
-    public owner: number;
+    public owner: Owner;
 
     /**
      * Estate Reference
@@ -100,7 +100,7 @@ export class Estate extends Model
         sector: string,
         country: string,
         picture: string,
-        owner: number
+        owner: Owner = null
     ) {
         super();
 

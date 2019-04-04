@@ -8,7 +8,7 @@ import { Owner } from 'src/models/Owner';
   selector: 'app-estate-form',
   templateUrl: './estate-form.component.html',
   styleUrls: ['./estate-form.component.css'],
-  providers: [EstateService]
+  providers: [EstateService, OwnerService]
 })
 export class EstateFormComponent implements OnInit 
 {
@@ -75,8 +75,10 @@ export class EstateFormComponent implements OnInit
         return;
       }
 
-      this.estateForm.value.owner = Number.parseInt(this.estateForm.value.owner);
-      console.log(this.estateForm.value);
+      this.estateForm.value.owner = this.ownerService.findById(
+          Number.parseInt(this.estateForm.value.owner)
+      );
+      
       this.estateService.add(this.estateForm.value);
       this.estateForm.reset();
   }

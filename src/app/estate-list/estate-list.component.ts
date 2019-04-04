@@ -18,7 +18,6 @@ export class EstateListComponent implements OnInit
   ) { }
 
   ngOnInit() {
-
     this.estates = this.estateService.getAll();
   }
 

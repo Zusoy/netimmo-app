@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="jumbotron jumbotron-fluid" style="margin-top: 2%;">
+        <div class="container">
+            <h1 class="display-4">{{ estate.title }}</h1>
+            <p class="lead">{{ estate.description }}</p>
+            <span class="badge badge-primary">{{ estate.price }} €</span><br>
+            <span class="badge badge-info">{{ estate.city }}</span><br>
+            <span class="badge badge-success">{{ estate.address }}</span><br>
+            <span class="badge badge-warning">{{ estate.area }} m²</span><br>
+            <span class="badge badge-primary">Owner: {{estate.owner.firstName}} {{estate.owner.lastName}}</span>
+
+        </div>
+    </div>
+
+    <div class="row" *ngIf="estate.picture != null && estate.picture.length">
+        <img src="{{ estate.picture }}">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Price</th>
+                    <th scope="col">Area</th>
+                    <th scope="col">Reference</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Postal Code</th>
+                    <th scope="col">Sector</th>
+                    <th scope="col">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ estate.price }} €</td>
+                    <td>{{ estate.area }} m²</td>
+                    <td>{{ estate.reference }}</td>
+                    <td>{{ estate.city }}</td>
+                    <td>{{ estate.address }}</td>
+                    <td>{{ estate.postalCode }}</td>
+                    <td>{{ estate.sector }}</td>
+                    <td>{{ estate.country }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

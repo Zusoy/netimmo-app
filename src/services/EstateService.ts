@@ -120,7 +120,7 @@ export class EstateService implements ItemService, LocalStorageService
     public findById(id: number): Estate
     {
         return this.models.find(estate => {
-            return (estate.getId() === id);
+            return (estate.getId() == id);
         });
     }
 
