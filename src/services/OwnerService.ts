@@ -113,7 +113,7 @@ export class OwnerService implements LocalStorageService, ItemService
     public findById(id: number): Owner
     {
         return this.models.find(owner => {
-            return (owner.getId() === id);
+            return (owner.getId() == id);
         });
     }
 

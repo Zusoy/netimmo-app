@@ -27,7 +27,7 @@ export class Estate extends Model
     public area: number;
 
     /**
-     * Owner ID
+     * Owner
      */
     public owner: Owner;
 

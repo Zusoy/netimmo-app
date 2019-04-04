@@ -102,6 +102,34 @@ export class EstateService implements ItemService, LocalStorageService
     }
 
 
+    public update(id: number, estate): void
+    {
+        var estateModel: Estate = this.findById(id);
+
+        if (estateModel == undefined || estateModel == null) {
+            return;
+        }
+
+        estateModel.title = estate.title;
+        estateModel.description = estate.description;
+        estateModel.price = estate.price;
+        estateModel.area = estate.area;
+        estateModel.owner = estate.owner;
+        estateModel.reference = estate.reference;
+        estateModel.address = estate.address;
+        estateModel.addressComplementary = estate.addressComplementary;
+        estateModel.postalCode = estate.postalCode;
+        estateModel.city = estate.city;
+        estateModel.sector = estate.sector;
+        estateModel.country = estate.country;
+        estateModel.latitude = estate.latitude;
+        estateModel.longitude = estate.longitude;
+        estateModel.picture = estate.picture;
+
+        this.persist();
+    }
+
+
     /**
      * Get Next ID
      */

@@ -7,8 +7,8 @@
             <span class="badge badge-info">{{ estate.city }}</span><br>
             <span class="badge badge-success">{{ estate.address }}</span><br>
             <span class="badge badge-warning">{{ estate.area }} m²</span><br>
-            <span class="badge badge-primary">Owner: {{estate.owner.firstName}} {{estate.owner.lastName}}</span>
-
+            <span class="badge badge-primary">Owner: {{estate.owner.firstName}} {{estate.owner.lastName}}</span><br><br>
+            <a [routerLink]="['/estate/edit',estate.id]" class="btn btn-warning">Edit</a>
         </div>
     </div>
 

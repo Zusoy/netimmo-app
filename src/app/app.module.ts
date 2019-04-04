@@ -9,6 +9,7 @@ import { OwnerFormComponent } from './owner-form/owner-form.component';
 import { EstateFormComponent } from './estate-form/estate-form.component';
 import { EstateListComponent } from './estate-list/estate-list.component';
 import { SingleEstateComponent } from './single-estate/single-estate.component';
+import { EstateEditComponent } from './estate-edit/estate-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SingleEstateComponent } from './single-estate/single-estate.component';
     OwnerFormComponent,
     EstateFormComponent,
     EstateListComponent,
-    SingleEstateComponent
+    SingleEstateComponent,
+    EstateEditComponent
   ],
   imports: [
     BrowserModule,

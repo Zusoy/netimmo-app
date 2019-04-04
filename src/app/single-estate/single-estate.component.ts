@@ -29,7 +29,6 @@ export class SingleEstateComponent implements OnInit {
     });
 
     this.estate = this.estateService.findById(estateId);
-    
 
     if (this.estate == undefined) {
       this.router.navigate(['estates']);
